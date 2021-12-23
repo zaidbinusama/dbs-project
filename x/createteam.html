@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>PHP login system</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div id = "frm">
+        <h1>Login</h1>
+        <form name="f1" action = "createteam.php" onsubmit = "return validation()" method = "POST">
+            <p>
+                <label> Name </label>
+                <input type = "text" id ="name" name  = "name" />
+            </p>
+            <p>
+                <label>Country </label>
+                <input type = "text" id ="country" name  = "country" />
+            </p>
+            <p>
+                <label> Matches Played</label>
+                <input type = "text" id ="Matches_played" name  = "Matches_played" />
+            </p>
+            <p>
+                <label> Won </label>
+                <input type = "text" id ="Won" name  = "Won" />
+            </p>
+            <p>
+                <label> Lost </label>
+                <input type = "text" id ="Lost" name  = "Lost" />
+            </p>
+            <p>
+                <label> Stadium </label>
+                <input type = "text" id ="Stadium" name  = "Stadium" />
+            </p>
+            <p>
+                <label> Titles </label>
+                <input type = "text" id ="title" name  = "title" />
+            </p>
+            <p>
+                <label> Year Established </label>
+                <input type = "text" id ="year" name  = "year" />
+            </p>
+                <input type =  "submit" id = "btn" value = "Login" />
+            </p>
+        </form>
+    </div>
+
+    <script>
+            function validation()
+            {
+                var nm=document.f1.name.value;
+                var cn=document.f1.country.value;
+                var mp=document.f1.Matches_played.value;
+                var wn=document.f1.Won.value;
+                var lt=document.f1.Lost.value;
+                var stdm=document.f1.Stadium.value;
+                var tt=document.f1.title.value;
+                var ye=document.f1.year.value;
+                if(nm.length=="" || cn.length=="" || mp.length=="" || wn.length==""
+              || lt.length=="" || stdm.length=="" || tt.length=="" || ye.length=="") {
+                    alert("Fields are empty");
+                    return false;
+                }
+            }
+        </script>
+</body>
+</html>

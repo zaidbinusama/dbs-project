@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>PHP login system</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div id = "frm">
+        <h1>Login</h1>
+        <form name="f1" action = "createcoach.php" onsubmit = "return validation()" method = "POST">
+            <p>
+                <label> Name </label>
+                <input type = "text" id ="name" name  = "name" />
+            </p>
+            <p>
+                <label>Country </label>
+                <input type = "text" id ="country" name  = "country" />
+            </p>
+            <p>
+                <label> Age </label>
+                <input type = "text" id ="Age" name  = "Age" />
+            </p>
+            <p>
+                <label> Career_start </label>
+                <input type = "text" id ="Cs" name  = "Cs" />
+            </p>
+            <p>
+                <input type =  "submit" id = "btn" value = "Login" />
+            </p>
+        </form>
+    </div>
+
+    <script>
+            function validation()
+            {
+                var nm=document.f1.name.value;
+                var cn=document.f1.country.value;
+                var ag=document.f1.Age.value;
+                var cs=document.f1.Cs.value;
+
+                if(nm.length=="" || cn.length=="" || ag.length=="" || cs.length=="") {
+                    alert("Fields are empty");
+                    return false;
+                }
+            }
+        </script>
+</body>
+</html>

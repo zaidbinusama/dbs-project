@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>PHP login system</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div id = "frm">
+        <h1>Login</h1>
+        <form name="f1" action = "createplayer.php" onsubmit = "return validation()" method = "POST">
+            <p>
+                <label> Name </label>
+                <input type = "text" id ="name" name  = "name" />
+            </p>
+            <p>
+                <label>Country </label>
+                <input type = "text" id ="country" name  = "country" />
+            </p>
+            <p>
+                <label> Dob </label>
+                <input type = "text" id ="dob" name  = "dob" />
+            </p>
+            <p>
+                <label> Height </label>
+                <input type = "text" id ="height" name  = "height" />
+            </p>
+            <p>
+                <label> Weight </label>
+                <input type = "text" id ="weight" name  = "weight" />
+            </p>
+            <p>
+                <label> Overall </label>
+                <input type = "text" id ="overall" name  = "overall" />
+            </p>
+            <p>
+                <label> Potential </label>
+                <input type = "text" id ="pt" name  = "pt" />
+            </p>
+            <p>
+                <label>Kit_number </label>
+                <input type = "text" id ="kt" name  = "kt" />
+            </p>
+            <p>
+                <label>Position </label>
+                <input type = "text" id ="pos" name  = "pos" />
+            </p>
+            <p>
+                <label>Preffered_foot </label>
+                <input type = "text" id ="pft" name  = "pft" />
+            </p>
+            <p>
+                <label>Player_value </label>
+                <input type = "text" id ="val" name  = "val" />
+            </p>
+            <p>
+                <label>wage </label>
+                <input type = "text" id ="wg" name  = "wg" />
+            </p>
+            <p>
+                <label>contract_until </label>
+                <input type = "text" id ="cnt" name  = "cnt" />
+            </p>
+            <p>
+                <input type =  "submit" id = "btn" value = "Login" />
+            </p>
+        </form>
+    </div>
+
+    <script>
+            function validation()
+            {
+                var nm=document.f1.name.value;
+                var cn=document.f1.country.value;
+                var db=document.f1.dob.value;
+                var ht=document.f1.height.value;
+                var wt=document.f1.weight.value;
+                var ov=document.f1.overall.value;
+                var pt=document.f1.pt.value;
+                var kt=document.f1.kt.value;
+                var pos=document.f1.pos.value;
+                var pft=document.f1.pft.value;
+                var wg=document.f1.wg.value;
+                var val=document.f1.val.value;
+                var cnt=document.f1.cnt.value;
+                if(nm.length=="" || cn.length=="" || db.length=="" || ht.length==""|| wt.length==""|| ov.length==""|| pt.length==""|| kt.length==""
+                || pos.length==""|| pft.length==""|| wg.length==""|| val.length==""|| cnt.length=="") {
+                    alert("Fields are empty");
+                    return false;
+                }
+            }
+        </script>
+</body>
+</html>

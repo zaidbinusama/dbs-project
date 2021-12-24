@@ -31,7 +31,7 @@ potential,overall,player_value,wage,preferred_foot,position,Kit_number,contract_
         //$count = mysqli_num_rows($result);
 
         //if($count == 1){
-            header("Location:http://localhost/x/createplayer.html");
+            header("Location:http://localhost/x/addplayer.html");
             exit; // <- don't forget this!
             //echo "<h1><center> Login successful </center></h1>";
         //}

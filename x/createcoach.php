@@ -24,7 +24,7 @@ career_start) VALUES('$name','$country','$ag', '$mxid', '$cs')");
         //$count = mysqli_num_rows($result);
 
         //if($count == 1){
-            header("Location:http://localhost/x/createplayer.html");
+            header("Location:http://localhost/y/dbs-project-Ahmad/x/createplayer.html");
             exit; // <- don't forget this!
             //echo "<h1><center> Login successful </center></h1>";
         //}

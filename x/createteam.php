@@ -28,7 +28,7 @@ Year_Established) VALUES('$name','$country','$mp','$wn','$lt','$stdm','$title','
         //$count = mysqli_num_rows($result);
 
         //if($count == 1){
-            header("Location:http://localhost/x/createcoach.html");
+            header("Location:http://localhost/y/dbs-project-Ahmad/x/createcoach.html");
             exit; // <- don't forget this!
             //echo "<h1><center> Login successful </center></h1>";
         //}

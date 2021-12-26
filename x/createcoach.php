@@ -8,6 +8,7 @@
     $country = $_POST['country'];
     $ag = $_POST['Age'];
     $cs = $_POST['Cs'];
+    $wg = $_POST['wg'];
     $mx = ("SELECT max(Team_id) as max_id from teams");
     $result2 = mysqli_query($conn, $mx) or die( mysqli_error($conn));
     $row = mysqli_fetch_assoc($result2);
@@ -16,7 +17,7 @@
 C_Country,
 Coach_Age,
 team_id,
-career_start) VALUES('$name','$country','$ag', '$mxid', '$cs')");
+career_start,Wage) VALUES('$name','$country','$ag', '$mxid', '$cs','$wg')");
 
         //$sql = ("SELECT * from user_log_in where Username = '$username' and User_password = '$password'");
         $result = mysqli_query($conn, $sql) or die( mysqli_error($conn));

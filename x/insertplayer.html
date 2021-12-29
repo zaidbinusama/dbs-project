@@ -9,7 +9,13 @@
 <body>
     <div id = "frm">
         <h1>CREATE PLAYER</h1>
-        <form name="f1" action = "createplayer.php" onsubmit = "return validation()" method = "POST">
+        <form name="f1" action = "insertplayer.php" onsubmit = "return validation()" method = "POST">
+          <p>
+            <div class="mb-3">
+              <label> Team ID </label>
+              <input class="form-control" type = "text" id ="teamid" name  = "teamid" />
+              </div>
+          </p>
             <p>
               <div class="mb-3">
                 <label> Name </label>
@@ -90,7 +96,7 @@
             </p>
             <p>
               <div class="mb-3">
-                <input class="btn btn-primary" type =  "submit" id = "btn" value = "Create" />
+                <input class="btn btn-primary" type =  "submit" id = "btn" value = "Submit" />
                 </div>
             </p>
         </form>
@@ -98,7 +104,7 @@
 
     <script>
             function validation()
-            {
+            {   var tid=document.f1.teamid.value;
                 var nm=document.f1.name.value;
                 var cn=document.f1.country.value;
                 var db=document.f1.dob.value;
@@ -112,7 +118,7 @@
                 var wg=document.f1.wg.value;
                 var val=document.f1.val.value;
                 var cnt=document.f1.cnt.value;
-                if(nm.length=="" || cn.length=="" || db.length=="" || ht.length==""|| wt.length==""|| ov.length==""|| pt.length==""|| kt.length==""
+                if(tid.length =="" nm.length=="" || cn.length=="" || db.length=="" || ht.length==""|| wt.length==""|| ov.length==""|| pt.length==""|| kt.length==""
                 || pos.length==""|| pft.length==""|| wg.length==""|| val.length==""|| cnt.length=="") {
                     alert("Fields are empty");
                     return false;

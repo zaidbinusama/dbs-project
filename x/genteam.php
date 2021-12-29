@@ -8,7 +8,7 @@
   <body>
     <table class = 'table table-light'>
       <tr>
-
+        <th>Player ID</th>
         <th>Player Name</th>
         <th>DOB</th>
         <th>Height</th>
@@ -34,7 +34,7 @@
 
       // echo $keys[0]; // prints merchant_id
       // print_r($_POST);
-      $sql = ("SELECT name, dob,
+      $sql = ("SELECT player_id, name, dob,
 height,
 weight,
 country,
@@ -51,7 +51,8 @@ contract_until from players20 where team_id  in (SELECT team_id from teams where
       $result = $conn-> query($sql);
       if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>".$row["name"].
+          echo "<tr><td>".$row["player_id"].
+          "</td><td>".$row["name"].
           "</td><td>".$row["dob"]."</td><td>".$row["height"].
           "</td><td>".$row["weight"]."</td><td>".$row["country"].
           "</td><td>".$row["overall"].

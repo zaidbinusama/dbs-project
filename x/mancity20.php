@@ -6,9 +6,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </head>
   <body>
-    <table class = 'table table-light'> 
+    <table class = 'table table-light'>
       <tr>
-
+        <th>Player ID</th>
         <th>Player Name</th>
         <th>DOB</th>
         <th>Height</th>
@@ -30,7 +30,7 @@
         die("Connection failed:". $conn->connect_error);
       }
 
-      $sql = ("SELECT name, dob,
+      $sql = ("SELECT player_id, name, dob,
 height,
 weight,
 country,
@@ -46,7 +46,8 @@ contract_until from players20 where team_id = 4");
 
       if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>".$row["name"].
+          echo "<tr><td>".$row["player_id"].
+          "</td><td>".$row["name"].
           "</td><td>".$row["dob"]."</td><td>".$row["height"].
           "</td><td>".$row["weight"]."</td><td>".$row["country"].
           "</td><td>".$row["overall"].

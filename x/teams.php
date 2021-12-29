@@ -8,6 +8,7 @@
   <body>
     <table class="table table-light">
       <tr>
+        <th>Team ID</th>
         <th>Team Name</th>
         <th>Country</th>
         <th>Matches Played</th>
@@ -25,12 +26,12 @@
         die("Connection failed:". $conn->connect_error);
       }
 
-      $sql = ("SELECT Team_name, Country, Matches_played, Won, Lost,Stadium,Titles_won,Year_Established from teams ");
+      $sql = ("SELECT Team_id,Team_name, Country, Matches_played, Won, Lost,Stadium,Titles_won,Year_Established from teams ");
       $result = $conn-> query($sql);
 
       if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>".$row["Team_name"]."</td><td>".$row["Country"].
+          echo "<tr><td>".$row["Team_id"]."</td><td>".$row["Team_name"]."</td><td>".$row["Country"].
           "</td><td>".$row["Matches_played"]."</td><td>".$row["Won"].
           "</td><td>".$row["Lost"]."</td><td>".$row["Stadium"]."</td>
           <td>".$row["Titles_won"]."</td><td>".$row["Year_Established"]."</td></tr>";

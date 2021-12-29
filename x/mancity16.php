@@ -8,7 +8,7 @@
   <body>
     <table class = 'table table-light'>
       <tr>
-
+        <th>Player ID</th>
         <th>Player Name</th>
         <th>DOB</th>
         <th>Height</th>
@@ -30,7 +30,7 @@
         die("Connection failed:". $conn->connect_error);
       }
 
-      $sql = ("SELECT name, dob,
+      $sql = ("SELECT player_id, name, dob,
 height,
 weight,
 country,
@@ -46,7 +46,8 @@ contract_until from players16 where team_id = 4");
 
       if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>".$row["name"].
+          echo "<tr><td>".$row["player_id"].
+          "</td><td>".$row["name"].
           "</td><td>".$row["dob"]."</td><td>".$row["height"].
           "</td><td>".$row["weight"]."</td><td>".$row["country"].
           "</td><td>".$row["overall"].
